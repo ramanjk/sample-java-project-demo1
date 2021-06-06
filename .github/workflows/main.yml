@@ -38,5 +38,16 @@ jobs:
         
       - name: Build with gradle
         run: ./gradlew build
-      
-      
+        
+      - name: Docker Build & Push Action
+        uses: mr-smithers-excellent/docker-build-push@v5.5
+        with:
+          # Name of the Docker image
+          image: rathinamtrainers/sample-java-project-demo1
+          # Target Docker registry
+          registry: docker.io
+          # Docker registry username
+          username: rathinamtrainers
+          # Docker registry password
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+
