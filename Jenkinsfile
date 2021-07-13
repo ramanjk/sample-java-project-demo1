@@ -8,13 +8,13 @@ pipeline {
   stages {
     stage('Clone GIT repo') {
       steps {
-        sh 'sh \'echo "Cloning git repository"\''
+        sh echo "Clonig the repository"
       }
     }
 
     stage('Build') {
       steps {
-        sh 'sh \'echo "Building the code"\''
+        sh  echo "Building the code"
       }
     }
 
