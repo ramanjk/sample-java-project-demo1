@@ -2,7 +2,6 @@ pipeline {
   agent {
     docker {
       image 'centos:latest'
-      label 'Test'
     }
 
   }
