@@ -14,7 +14,12 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'echo "Doing a build"'
+        sh 'echo "Building the code"'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'echo "Deploying the software on kubernetes"'
       }
     }
 
